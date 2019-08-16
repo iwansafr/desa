@@ -1,6 +1,7 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
 // pr($data);
+die();
 ?>
 <nav>
   <div class="nav nav-tabs" id="nav-tab" role="tablist">
