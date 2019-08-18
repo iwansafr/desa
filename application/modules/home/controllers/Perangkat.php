@@ -89,4 +89,14 @@ class Perangkat extends CI_Controller
 		$this->home_model->home();
 		$this->load->view('index',['data'=>$this->perangkat_model->get_all(9)]);
 	}
+	public function kades()
+	{
+		$this->home_model->home();
+		$this->load->view('index',['data'=>$this->perangkat_model->get_all(1,1)]);
+	}
+	public function sekdes()
+	{
+		$this->home_model->home();
+		$this->load->view('index',['data'=>$this->perangkat_model->get_all(1,2)]);
+	}
 }
