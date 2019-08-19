@@ -92,4 +92,28 @@
   	<?php $i++; ?>
 	<?php endforeach ?>
 </div>
-<?php pr($kepdes_notes) ?>
+
+<div class="accordion" id="accordionExample">
+	<?php 
+	foreach($kepdes_notes AS $key => $value)
+	{
+		?>
+	  <div class="card">
+	    <div class="card-header" id="headingOne">
+	      <h2 class="mb-0">
+	        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse<?php echo $key;?>" aria-expanded="true" aria-controls="collapse<?php echo $key;?>">
+	          <?php echo '+ '.$key ?>
+	        </button>
+	      </h2>
+	    </div>
+
+	    <div id="collapse<?php echo $key;?>" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+	      <div class="card-body">
+	        <?php echo $value ?>
+	      </div>
+	    </div>
+	  </div>
+		<?php
+	}
+	?>
+</div>
