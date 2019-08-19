@@ -21,4 +21,8 @@ class Data extends CI_Controller
   {
     $this->load->view('index');
   }
+  public function kepdes_notes()
+  {
+  	$this->load->view('index');
+  }
 }

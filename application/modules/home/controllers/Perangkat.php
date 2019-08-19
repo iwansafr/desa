@@ -19,7 +19,9 @@ class Perangkat extends CI_Controller
 	public function desa()
 	{
 		$this->home_model->home();
-		$this->load->view('index',['data'=>$this->perangkat_model->get_all(1)]);
+		$data = $this->perangkat_model->get_all(1);
+		unset($data['1'],$data['2']);
+		$this->load->view('index',['data'=>$data]);
 	}
 	public function bpd()
 	{
@@ -89,12 +91,13 @@ class Perangkat extends CI_Controller
 		$this->home_model->home();
 		$this->load->view('index',['data'=>$this->perangkat_model->get_all(9)]);
 	}
-	public function kades()
+	public function kepala_desa()
 	{
 		$this->home_model->home();
-		$this->load->view('index',['data'=>$this->perangkat_model->get_all(1,1)]);
+		$kepdes_notes = $this->esg->get_config('kepdes_notes');
+		$this->load->view('index',['data'=>$this->perangkat_model->get_all(1,1),'kepdes_notes'=>$kepdes_notes]);
 	}
-	public function sekdes()
+	public function sekretaris_desa()
 	{
 		$this->home_model->home();
 		$this->load->view('index',['data'=>$this->perangkat_model->get_all(1,2)]);
