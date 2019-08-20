@@ -77,7 +77,35 @@
                     <td>: <?php echo strtoupper($dvalue['pelantik'])?></td>
                   </tr>
                 </table>
-                
+                <?php 
+                $riwayat_pendidikan = $dvalue['riwayat_pendidikan'];
+                if (!empty($riwayat_pendidikan))
+                {
+                  $riwayat_pendidikan = explode("\n", $riwayat_pendidikan);
+                  ?>
+                  <h5>Riwayat Pendidikan</h5>
+                  <table class="table <?php echo $class ?> table-sm table-striped table-hover" style="font-size: 11px;">
+                    <tr>
+                      <th>No</th>
+                      <th>Jenjang</th>
+                    </tr>
+                    <?php 
+                    $ii = 1;
+                    foreach ($riwayat_pendidikan as $rpkey => $rpvalue) 
+                    {
+                      ?>
+                      <tr>
+                        <td><?php echo strtoupper($ii); ?></td>
+                        <td><?php echo strtoupper($rpvalue); ?></td>
+                      </tr>
+                      <?php
+                      $ii++;
+                    }
+                    ?>
+                  </table>
+                  <?php
+                }
+                ?>
               </div>
               
             </div>
@@ -102,7 +130,7 @@
 	    <div class="card-header" id="headingOne">
 	      <h2 class="mb-0">
 	        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse<?php echo $key;?>" aria-expanded="true" aria-controls="collapse<?php echo $key;?>">
-	          <?php echo '+ '.$key ?>
+	          <?php echo '+ '.$key.' KEPALA DESA' ?>
 	        </button>
 	      </h2>
 	    </div>
