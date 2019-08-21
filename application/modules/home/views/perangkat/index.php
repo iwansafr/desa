@@ -47,10 +47,6 @@ die();
                       <td>: <?php echo $dvalue['nama']?></td>
                     </tr>
                     <tr>
-                      <td>NIK</td>
-                      <td>: <?php echo $dvalue['nik']?></td>
-                    </tr>
-                    <tr>
                       <td>TTL</td>
                       <td>: <?php echo $dvalue['tempat_lahir'].', '.content_date($dvalue['tgl_lahir'])?></td>
                     </tr>

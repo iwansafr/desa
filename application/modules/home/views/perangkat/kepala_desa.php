@@ -41,10 +41,6 @@
                     <td>: <?php echo strtoupper($dvalue['nama'])?></td>
                   </tr>
                   <tr>
-                    <td>NIK</td>
-                    <td>: <?php echo strtoupper($dvalue['nik'])?></td>
-                  </tr>
-                  <tr>
                     <td>TTL</td>
                     <td>: <?php echo strtoupper($dvalue['tempat_lahir'].', '.content_date($dvalue['tgl_lahir']))?></td>
                   </tr>
