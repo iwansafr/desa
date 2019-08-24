@@ -22,9 +22,12 @@ class Perangkat_model extends CI_Model
       }
       // $data = file_get_contents($api_config['link'].'&kelompok='.$id.'&full=1'.$get);
       $data = getSSLPage($api_config['link'].'&kelompok='.$id.'&full=1'.$get);
-      $data = json_decode($data,true);
-      ksort($data);
-      return $data;
+      if(!empty($data))
+      {
+        $data = json_decode($data,true);
+        ksort($data);
+        return $data;
+      }
     }
   }
 
