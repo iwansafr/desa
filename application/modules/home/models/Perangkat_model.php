@@ -20,8 +20,9 @@ class Perangkat_model extends CI_Model
       {
         $get = '&jabatan='.$jabatan;
       }
-      // $data = file_get_contents($api_config['link'].'&kelompok='.$id.'&full=1'.$get);
-      $data = getSSLPage($api_config['link'].'&kelompok='.$id.'&full=1'.$get);
+      $data = file_get_contents($api_config['link'].'&kelompok='.$id.'&full=1'.$get);
+      // $data = getSSLPage($api_config['link'].'&kelompok='.$id.'&full=1'.$get);
+      // pr($data);die();
       if(!empty($data))
       {
         $data = json_decode($data,true);
