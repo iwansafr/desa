@@ -78,6 +78,7 @@ class Perangkat extends CI_Controller
 			}
 			$data = $data_tmp;
 		}
+		pr($data);
 		ksort($data);
 		$this->load->view('index',['data'=>$data]);
 	}
