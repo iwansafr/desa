@@ -58,8 +58,8 @@ class Perangkat extends CI_Controller
 				}
 			}
 			$data = $data_tmp;
+			ksort($data);
 		}
-		ksort($data);
 		$this->load->view('index',['data'=>$data]);
 	}
 	public function rw()
@@ -77,8 +77,8 @@ class Perangkat extends CI_Controller
 				}
 			}
 			$data = $data_tmp;
+			ksort($data);
 		}
-		ksort($data);
 		$this->load->view('index',['data'=>$data]);
 	}
 	public function kpmd()
